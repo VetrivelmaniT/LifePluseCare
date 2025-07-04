@@ -1,0 +1,178 @@
+/* Container */
+.donor-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #000; /* fallback */
+}
+
+/* Background Slideshow */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.background-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  animation: fadeImages 16s infinite;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Animation delays for slideshow */
+.background-image img:nth-child(1) { animation-delay: 0s; }
+.background-image img:nth-child(2) { animation-delay: 4s; }
+.background-image img:nth-child(3) { animation-delay: 8s; }
+.background-image img:nth-child(4) { animation-delay: 12s; }
+
+@keyframes fadeImages {
+  0%, 100% { opacity: 0; }
+  10%, 25% { opacity: 1; }
+  30%, 90% { opacity: 0; }
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Content Block */
+.content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Fade-in animation effect */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s forwards ease-in;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filters */
+.filter-ui {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+select {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  min-width: 200px;
+  background: #fff;
+  color: #333;
+}
+
+/* CTA Button */
+.cta-btn {
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #e60023;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #c0001d;
+}
+
+/* Quote or Additional Text */
+.quote {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #ffcaca;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content {
+    max-width: 90%;
+  }
+
+  select {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .content h3 {
+    font-size: 1.3rem;
+  }
+
+  .content p,
+  .quote {
+    font-size: 0.95rem;
+  }
+
+  select {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+.donor-note a{
+  font-weight: bold;
+  color: #e60023;
+}

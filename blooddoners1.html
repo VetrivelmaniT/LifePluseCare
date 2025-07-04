@@ -1,0 +1,125 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifePluseCare - Empowering Lives Through Compassionate Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a66407714a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/blooddoners.css">
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="logo-container">
+          <i class="fas fa-heartbeat logo-icon"></i>
+          <a href="home.html" class="logo-text">LifePluseCare</a>
+        </div>
+        <input type="checkbox" id="menu-toggle" hidden />
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blood.html">Blood Donation</a></li>
+            <li><a href="organ.html">Organ Donation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <label for="menu-toggle" class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+        </nav>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Donation Section -->
+    <section class="contact-section" id="donate">
+      <div class="animated-container">
+        <h2 class="animate-text">Become a Donor</h2>
+        <p>Join us in saving lives. Register for blood or organ donation today.</p>
+
+        <form class="contact-form">
+          <!-- Select Donation Type -->
+          <div class="form-group">
+            <label for="donation-type">Donation Type</label>
+            <select id="donation-type" name="donation-type" required>
+              <option value="">Select Donation Type</option>
+              <option value="blood">Blood Donation</option>
+              <option value="organ">Organ Donation</option>
+            </select>
+          </div>
+
+          <!-- Organ Type -->
+          <div class="form-group">
+            <label for="organ">Organ Type</label>
+            <select id="organ" name="organ">
+              <option value="">Select Organ</option>
+              <option>Heart</option>
+              <option>Liver</option>
+              <option>Kidney</option>
+              <option>Lungs</option>
+              <option>Eyes</option>
+              <option>Pancreas</option>
+            </select>
+          </div>
+
+          <!-- Blood Group -->
+          <div class="form-group">
+            <label for="blood-group">Blood Group</label>
+            <select id="blood-group" name="blood-group">
+              <option value="">Select Blood Group</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>B-</option>
+              <option>AB+</option>
+              <option>AB-</option>
+              <option>O+</option>
+              <option>O-</option>
+            </select>
+          </div>
+
+          <!-- Personal Details -->
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Donation Info</button>
+        </form>
+
+        <div class="auth-section">
+          <p>Already registered?</p>
+          <a href="login.html" class="auth-btn">Login</a>
+          <p>New here?</p>
+          <a href="register.html" class="auth-btn">Register</a>
+        </div>
+      </div>
+    </section>
+
+
+  </body>
+  </html>

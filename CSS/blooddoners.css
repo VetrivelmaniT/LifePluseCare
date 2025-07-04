@@ -1,0 +1,126 @@
+.contact-section {
+  background: linear-gradient(to right, #f9f9f9, #fff);
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.animated-container {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeInSlideUp 1.2s ease;
+}
+
+.animate-text {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #c21807; /* Bold red */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c21807;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #c21807;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #a91505;
+}
+
+.auth-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.auth-section p {
+  margin: 8px 0 4px;
+  color: #555;
+}
+
+.auth-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: 2px solid #c21807;
+  border-radius: 6px;
+  color: #c21807;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #c21807;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .animated-container {
+    padding: 25px;
+  }
+
+  .animate-text {
+    font-size: 2rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+}
