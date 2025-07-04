@@ -403,3 +403,67 @@
         transform: translateX(0);
       }
     }
+/* Responsive for tablets and below */
+@media (max-width: 991px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .lady-figure {
+    width: 250px;
+    height: 350px;
+  }
+
+  .contact-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 100px 10px 60px;
+  }
+
+  .lady-figure {
+    width: 200px;
+    height: 300px;
+  }
+
+  .contact-content h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-content p {
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-item1 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 2rem 1rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
